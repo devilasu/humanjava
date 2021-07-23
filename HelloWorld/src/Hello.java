@@ -4,21 +4,27 @@ public class Hello {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner s = new Scanner(System.in);
-		int num = Integer.parseInt(s.nextLine());
-		s.close();
-		if(num>89)
-			System.out.println("A");
-		else if(num>79)
-			System.out.println("B");
-		else if(num>79)
-			System.out.println("C");
-		else if(num>79)
-			System.out.println("D");
-		else
-			System.out.println("F");
+		int n= 1;
+		while(n<101) {
+			if(n%2 ==1)
+			System.out.println(n);
+			n++;
+		}
 	}
 }
+//		Scanner s = new Scanner(System.in);
+//		int num = Integer.parseInt(s.nextLine());
+//		s.close();
+//		if(num>89)
+//			System.out.println("A");
+//		else if(num>79)
+//			System.out.println("B");
+//		else if(num>79)
+//			System.out.println("C");
+//		else if(num>79)
+//			System.out.println("D");
+//		else
+//			System.out.println("F");
 //		switch(str) {
 //		case "a","A":
 //			System.out.println("Apple");
