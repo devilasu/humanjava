@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Hello00 {
 
 	public static void main(String[] args) {
