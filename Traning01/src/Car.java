@@ -9,6 +9,28 @@ public class Car {
 	private int wheel;
 	private ArrayList<Integer> dailyRun;
 	
+	Car(){
+		this.color = "blue";
+		this.maxSpeed = 240;
+		this.nSpeed=0;
+		this.guest = 5;
+		this.dailyRun = new ArrayList<Integer>();
+	}
+	Car(String c, int g, int m , int n){
+		this.color = c;
+		this.guest = g;
+		this.maxSpeed = m;
+		this.nSpeed =n;
+	}
+	Car(String c, int g, int m , int n, String mo, int wheel){
+		this.color = c;
+		this.guest = g;
+		this.maxSpeed = m;
+		this.nSpeed =n;
+		this.modelName = mo;
+		this.wheel = wheel;
+	}
+	
 	void drive(int curSpeed) {
 		this.nSpeed=curSpeed;
 	}
