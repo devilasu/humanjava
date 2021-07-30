@@ -24,7 +24,7 @@ public class Menu {
 	
 	public void showMenu() {
 		for(int i = 0 ; i<this.alName.size();i++) {
-			System.out.print(this.alName.get(i)+" ");
+			System.out.print(this.alName.get(i)+"\t");
 			System.out.println(this.alPrice.get(i));
 		}
 	}
