@@ -23,10 +23,7 @@ public class Car {
 		this.nSpeed =n;
 	}
 	Car(String c, int g, int m , int n, String mo, int wheel){
-		this.color = c;
-		this.guest = g;
-		this.maxSpeed = m;
-		this.nSpeed =n;
+		this(c,g,m,n);		//다른 생성자 호출
 		this.modelName = mo;
 		this.wheel = wheel;
 	}
