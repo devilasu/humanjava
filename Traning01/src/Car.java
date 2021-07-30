@@ -10,24 +10,32 @@ public class Car {
 	private ArrayList<Integer> dailyRun;
 	
 	Car(){
-		this.color = "blue";
-		this.maxSpeed = 240;
-		this.nSpeed=0;
-		this.guest = 5;
-		this.dailyRun = new ArrayList<Integer>();
-	}
-	Car(String c, int g, int m , int n){
-		this.color = c;
-		this.guest = g;
-		this.maxSpeed = m;
-		this.nSpeed =n;
-	}
-	Car(String c, int g, int m , int n, String mo, int wheel){
-		this(c,g,m,n);		//다른 생성자 호출
-		this.modelName = mo;
-		this.wheel = wheel;
+//		this.color = "blue";
+//		this.maxSpeed = 240;
+//		this.nSpeed=0;
+//		this.guest = 5;
+//		this.dailyRun = new ArrayList<Integer>();
+		this("blue",5,240,0);
 	}
 	
+	
+	public Car(String color, int maxSpeed, int nSpeed, int guest) {
+		this.color = color;
+		this.maxSpeed = maxSpeed;
+		this.nSpeed = nSpeed;
+		this.guest = guest;
+	}
+
+	public Car(String color, int maxSpeed, int nSpeed, int guest, String modelName, int wheel) {
+		this.color = color;
+		this.maxSpeed = maxSpeed;
+		this.nSpeed = nSpeed;
+		this.guest = guest;
+		this.modelName = modelName;
+		this.wheel = wheel;
+	}
+
+
 	void drive(int curSpeed) {
 		this.nSpeed=curSpeed;
 	}
