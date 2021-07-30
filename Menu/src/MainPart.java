@@ -5,7 +5,6 @@ public class MainPart {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Menu menu = new Menu();
-		menu.init();
 		Scanner s = new Scanner(System.in);
 		
 		while(true) {

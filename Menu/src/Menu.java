@@ -4,6 +4,10 @@ public class Menu {
 	private ArrayList<String> alName;
 	private ArrayList<Integer> alPrice;
 	
+	Menu(){
+		init();
+	}
+	
 	void init() {
 		this.alName = new ArrayList<String>();
 		this.alPrice = new ArrayList<Integer>();
