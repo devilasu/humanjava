@@ -10,20 +10,20 @@ public class Menu {
 	}
 	
 	public String getName(int i) {
-		return alName.get(i);
+		return this.alName.get(i);
 	}
 	public void addName(String name) {
-		alName.add(name);
+		this.alName.add(name);
 	}
 	public Integer getPrice(int i) {
-		return alPrice.get(i);
+		return this.alPrice.get(i);
 	}
 	public void addPrice(Integer price) {
-		alPrice.add(price);
+		this.alPrice.add(price);
 	}
 	
 	public void showMenu() {
-		for(int i = 0 ; i<alName.size();i++) {
+		for(int i = 0 ; i<this.alName.size();i++) {
 			System.out.print(this.alName.get(i)+" ");
 			System.out.println(this.alPrice.get(i));
 		}

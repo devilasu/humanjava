@@ -4,8 +4,8 @@ public class MainPart {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Menu mMenu = new Menu();
-		mMenu.init();
+		Menu menu = new Menu();
+		menu.init();
 		Scanner s = new Scanner(System.in);
 		
 		while(true) {
@@ -13,12 +13,12 @@ public class MainPart {
 			String tmpName = s.nextLine();
 			
 			if(tmpName.isBlank()) {
-				mMenu.showMenu();
+				menu.showMenu();
 				break;
 			}
 			System.out.print("АЁАн: ");
-			mMenu.addName(tmpName);
-			mMenu.addPrice(Integer.parseInt(s.nextLine()));
+			menu.addName(tmpName);
+			menu.addPrice(Integer.parseInt(s.nextLine()));
 		}
 		s.close();
 	}
