@@ -1,4 +1,8 @@
 package menu;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Menu {
@@ -13,27 +17,24 @@ public class Menu {
 		this.alName = new ArrayList<String>();
 		this.alPrice = new ArrayList<Integer>();
 		
-		addName("Americano");
-		addName("Espresso");
-		addName("Latte");
-		addPrice(2500);
-		addPrice(2000);
-		addPrice(3500);
-		
 		showMenu();
 	}
 	
-	public String getName(int i) {
-		return this.alName.get(i);
+	public ArrayList<String> getName() {
+		return this.alName;
 	}
 	public void addName(String name) {
 		this.alName.add(name);
 	}
-	public Integer getPrice(int i) {
-		return this.alPrice.get(i);
+	public ArrayList<Integer> getPrice() {
+		return this.alPrice;
 	}
 	public void addPrice(Integer price) {
 		this.alPrice.add(price);
+	}
+	
+	public void addPrice(String price) {
+		this.alPrice.add(Integer.parseInt(price));
 	}
 	
 	public void showMenu() {
@@ -43,11 +44,24 @@ public class Menu {
 		}
 	}
 	
-	void save() {
-		
+	void save(ArrayList<String> alName, ArrayList<Integer> alPrice) throws IOException{
+		FileWriter fw = new FileWriter("e:/humanjava/menu.txt");
+		for(int i = 0 ; i< alName.size();i++)
+		fw.write(alName.get(i)+","+alPrice.get(i)+"\n");
+		fw.close();
 	}
 	
-	void load() {
-		
+	void load() throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader("e:/humanjava/menu.txt"));
+		String line;
+		while(true) {
+			line = br.readLine();
+			if(line==null)
+				break;
+			String[] parts = line.split(",");
+			this.addName(parts[0]);
+			this.addPrice(parts[1]);
+		}		
+		br.close();
 	}
 }
