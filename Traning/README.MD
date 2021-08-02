@@ -4,7 +4,7 @@
  클래스(객체)
  접근제한자(Access Modifier)
   public	(무제한 사용/공유)
-  protected	(상속: 상속받은 자식클래스만 공유)
+  protected	(상속: 다른패키지의 상속받은 자식클래스와 공유)
   default	(같은 패키지에서만 공유)
   private	(클래스 내부에서만 공유)
 
