@@ -21,5 +21,6 @@ public class MainPart {
 		Cat cat = new Cat();
 		cat.run();
 		cat.sound();
+		
 	}
 }
