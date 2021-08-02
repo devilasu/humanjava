@@ -1,4 +1,4 @@
-package tranaing04;
+package traning04;
 
 public class Car {
 	Tire frontLeft;

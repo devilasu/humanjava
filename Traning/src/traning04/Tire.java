@@ -1,4 +1,4 @@
-package tranaing04;
+package traning04;
 
 public class Tire {
 	int maxRotation;	//수명(최대 회전수)
