@@ -41,7 +41,9 @@ public class Coffeeshop {
 	/*
 	 static void order(){
 	 	Order order = new Order();
-	 	
+	 	while(true){
+	 		System.out.print("전화번호: ");
+	 	}
 	 }
 	  
 	  
