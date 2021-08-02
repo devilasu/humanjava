@@ -1,4 +1,4 @@
-package kimyoungjea;
+package student;
 
 public class Student {
 	String name;

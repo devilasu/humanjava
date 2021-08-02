@@ -1,4 +1,4 @@
-package kimyoungjea;
+package student;
 
 public class Computer {
 	int memory;			//¸Þ¸ð¸®
