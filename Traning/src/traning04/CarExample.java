@@ -12,7 +12,7 @@ public class CarExample {
 				System.out.println("哭率 菊 沏农");
 				break;
 			case 2:
-				System.out.println("坷弗率率 菊 沏农");
+				System.out.println("坷弗率 菊 沏农");
 				break;
 			case 3:
 				System.out.println("哭率 第 沏农");

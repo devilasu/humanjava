@@ -12,6 +12,15 @@ public class Menu {
 	void init() {
 		this.alName = new ArrayList<String>();
 		this.alPrice = new ArrayList<Integer>();
+		
+		addName("Americano");
+		addName("Espresso");
+		addName("Latte");
+		addPrice(2500);
+		addPrice(2000);
+		addPrice(3500);
+		
+		showMenu();
 	}
 	
 	public String getName(int i) {

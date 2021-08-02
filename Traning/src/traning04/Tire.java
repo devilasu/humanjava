@@ -11,8 +11,8 @@ public class Tire {
 	}
 	boolean roll() {
 		++this.accRotation;
-		if(this.accRotation>this.maxRotation) {
-			System.out.println(this.location+" Tire 남은 수명"+(this.maxRotation-this.accRotation));
+		if(this.accRotation<this.maxRotation) {
+			System.out.println(this.location+" Tire 남은 수명: "+(this.maxRotation-this.accRotation));
 			return true;
 		}else {
 			System.out.println(this.location+" Tire 펑크");
