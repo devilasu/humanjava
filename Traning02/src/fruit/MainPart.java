@@ -1,3 +1,4 @@
+package fruit;
 
 public class MainPart {
 
