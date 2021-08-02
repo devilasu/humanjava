@@ -1,11 +1,11 @@
 package menu;
 import java.util.ArrayList;
 
-public class Menu {
+public class Coffeeshop {
 	private ArrayList<String> alName;
 	private ArrayList<Integer> alPrice;
 	
-	Menu(){
+	Coffeeshop(){
 		init();
 	}
 	
