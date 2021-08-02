@@ -16,6 +16,7 @@ public class MainPart {
 		System.out.println("ÀÎ°£ ¹ß: "+nin.feet_count);
 		nin.run();
 		nin.sound();
+		nin.study();
 		
 		Cat cat = new Cat();
 		cat.run();

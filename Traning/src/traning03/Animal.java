@@ -13,6 +13,6 @@ public class Animal {
 		System.out.println("Animal 달린다.");
 	}
 	void sound() {
-		System.out.println("Anumal 소리낸다.");
+		System.out.println("Animal 소리낸다.");
 	}
 }
