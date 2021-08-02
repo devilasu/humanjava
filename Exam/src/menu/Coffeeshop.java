@@ -22,6 +22,7 @@ public class Coffeeshop {
 			
 			if(tmpName.isBlank()) {
 				menu.showMenu();
+				
 				try {
 					menu.save(menu.getName(), menu.getPrice());
 				} catch (IOException e) {

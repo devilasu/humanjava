@@ -56,7 +56,7 @@ public class Menu {
 		String line;
 		while(true) {
 			line = br.readLine();
-			if(line==null)
+			if(line==null || line.isBlank())
 				break;
 			String[] parts = line.split(",");
 			this.addName(parts[0]);

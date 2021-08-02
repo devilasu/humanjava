@@ -1,0 +1,4 @@
+Americano,2000
+Espresso,2500
+Latte,3500
+juice,5000
