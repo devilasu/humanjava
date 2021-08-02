@@ -17,7 +17,12 @@ public class Menu {
 		this.alName = new ArrayList<String>();
 		this.alPrice = new ArrayList<Integer>();
 		
-		showMenu();
+		try {
+			this.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public ArrayList<String> getName() {
