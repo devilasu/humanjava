@@ -1,46 +1,26 @@
 package menu;
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Coffeeshop {
-	private ArrayList<String> alName;
-	private ArrayList<Integer> alPrice;
-	
-	Coffeeshop(){
-		init();
-	}
-	
-	void init() {
-		this.alName = new ArrayList<String>();
-		this.alPrice = new ArrayList<Integer>();
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Menu menu = new Menu();
+		Scanner s = new Scanner(System.in);
 		
-		addName("Americano");
-		addName("Espresso");
-		addName("Latte");
-		addPrice(2500);
-		addPrice(2000);
-		addPrice(3500);
-		
-		showMenu();
-	}
-	
-	public String getName(int i) {
-		return this.alName.get(i);
-	}
-	public void addName(String name) {
-		this.alName.add(name);
-	}
-	public Integer getPrice(int i) {
-		return this.alPrice.get(i);
-	}
-	public void addPrice(Integer price) {
-		this.alPrice.add(price);
-	}
-	
-	public void showMenu() {
-		for(int i = 0 ; i<this.alName.size();i++) {
-			System.out.print(this.alName.get(i)+"\t");
-			System.out.println(this.alPrice.get(i));
+		while(true) {
+			System.out.print("메뉴이름: ");
+			String tmpName = s.nextLine();
+			
+			if(tmpName.isBlank()) {
+				menu.showMenu();
+				break;
+			}
+			System.out.print("가격: ");
+			menu.addName(tmpName);
+			menu.addPrice(Integer.parseInt(s.nextLine()));
 		}
+		s.close();
 	}
-	
+
 }
