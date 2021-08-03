@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Menu {
 	private ArrayList<String> alName;
@@ -41,21 +42,44 @@ public class Menu {
 		this.alPrice.add(Integer.parseInt(price));
 	}
 	
-	public void updateMenu(int idx, String newName, Integer newPrice) {
-		this.alName.set(idx, newName);
-		this.alPrice.set(idx, newPrice);
-	}
-	public void updateMenu(String idx, String newName, String newPrice) {
-		int nIdx = Integer.parseInt(idx);
-		int nPrice = Integer.parseInt(newPrice);
-		this.alName.set(nIdx-1, newName);
-		this.alPrice.set(nIdx-1, nPrice);
+	public void appendMenu(Scanner s) {
+		String tmpName, tmpPrice;
+		System.out.print("메뉴이름: ");
+		tmpName = s.nextLine();
+		if(tmpName.isBlank()) {
+		//	s.close();
+			return;
+		}
+			
+		System.out.print("가격: ");
+		tmpPrice = s.nextLine();
+		this.addName(tmpName);
+		this.addPrice(Integer.parseInt(tmpPrice));
+	//	s.close();
 	}
 	
-	public void deleteMenu(String idx) {
-		int nIdx = Integer.parseInt(idx);
+	public void updateMenu(Scanner s) {
+		this.showMenu();
+		String nIdx, newName, newPrice;
+		System.out.println("업데이트할 번호를 입력하세요.");;
+		nIdx = s.nextLine();
+		System.out.print("새로운 이름: ");
+		newName = s.nextLine();
+		System.out.print("새로운 가격: ");
+		newPrice = s.nextLine();
+		
+		this.alName.set(Integer.parseInt(nIdx)-1, newName);
+		this.alPrice.set(Integer.parseInt(nIdx)-1, Integer.parseInt(newPrice));
+	//	s.close();
+	}
+	
+	public void deleteMenu(Scanner s) {
+		System.out.println("제거할 번호를 입력하세요.");;
+		int nIdx = Integer.parseInt(s.nextLine());
+		
 		this.alName.remove(nIdx-1);
 		this.alPrice.remove(nIdx-1);
+	//	s.close();
 	}
 	
 	public void showMenu() {
