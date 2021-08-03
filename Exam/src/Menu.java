@@ -41,16 +41,33 @@ public class Menu {
 		this.alPrice.add(Integer.parseInt(price));
 	}
 	
+	public void updateMenu(int idx, String newName, Integer newPrice) {
+		this.alName.set(idx, newName);
+		this.alPrice.set(idx, newPrice);
+	}
+	public void updateMenu(String idx, String newName, String newPrice) {
+		int nIdx = Integer.parseInt(idx);
+		int nPrice = Integer.parseInt(newPrice);
+		this.alName.set(nIdx, newName);
+		this.alPrice.set(nIdx, nPrice);
+	}
+	
+	public void deleteMenu(String idx) {
+		int nIdx = Integer.parseInt(idx);
+		this.alName.remove(nIdx);
+		this.alPrice.remove(nIdx);
+	}
+	
 	public void showMenu() {
 		for(int i = 0 ; i<this.alName.size();i++) {
-			System.out.print(this.alName.get(i)+"\t");
+			System.out.print(i+". "+this.alName.get(i)+"\t");
 			System.out.println(this.alPrice.get(i));
 		}
 	}
 	
 	void save(ArrayList<String> alName, ArrayList<Integer> alPrice){
 		try {
-		FileWriter fw = new FileWriter("e:/humanjava/menu.txt");
+		FileWriter fw = new FileWriter("d:/study/humanjava/menu.txt");
 		for(int i = 0 ; i< alName.size();i++)
 		fw.write(alName.get(i)+","+alPrice.get(i)+"\n");
 		fw.close();
@@ -61,7 +78,7 @@ public class Menu {
 	
 	void load(){
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("e:/humanjava/menu.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("d:/study/humanjava/menu.txt"));
 			String line;
 			while(true) {
 				line = br.readLine();
