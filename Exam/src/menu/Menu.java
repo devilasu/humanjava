@@ -49,24 +49,32 @@ public class Menu {
 		}
 	}
 	
-	void save(ArrayList<String> alName, ArrayList<Integer> alPrice) throws IOException{
+	void save(ArrayList<String> alName, ArrayList<Integer> alPrice){
+		try {
 		FileWriter fw = new FileWriter("e:/humanjava/menu.txt");
 		for(int i = 0 ; i< alName.size();i++)
 		fw.write(alName.get(i)+","+alPrice.get(i)+"\n");
 		fw.close();
+		} catch(Throwable e) {
+			e.printStackTrace();
+		}
 	}
 	
 	void load() throws IOException{
-		BufferedReader br = new BufferedReader(new FileReader("e:/humanjava/menu.txt"));
-		String line;
-		while(true) {
-			line = br.readLine();
-			if(line==null || line.isBlank())
-				break;
-			String[] parts = line.split(",");
-			this.addName(parts[0]);
-			this.addPrice(parts[1]);
-		}		
-		br.close();
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("e:/humanjava/menu.txt"));
+			String line;
+			while(true) {
+				line = br.readLine();
+				if(line==null || line.isBlank())
+					break;
+				String[] parts = line.split(",");
+				this.addName(parts[0]);
+				this.addPrice(parts[1]);
+			}		
+			br.close();
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 	}
 }
