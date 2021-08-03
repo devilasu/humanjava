@@ -59,16 +59,16 @@ public class Menu {
 	}
 	
 	public void showMenu() {
-		for(int i = 1 ; i<this.alName.size();i++) {
+		for(int i = 1 ; i<=this.alName.size();i++) {
 			System.out.println(i+". "+String.format("%-10s\t%d",this.alName.get(i-1),this.alPrice.get(i-1)));
 		}
 	}
 	
-	void save(ArrayList<String> alName, ArrayList<Integer> alPrice){
+	void save(){
 		try {
 		FileWriter fw = new FileWriter("d:/study/humanjava/menu.txt");
-		for(int i = 0 ; i< alName.size();i++)
-		fw.write(alName.get(i)+","+alPrice.get(i)+"\n");
+		for(int i = 0 ; i< this.alName.size();i++)
+		fw.write(this.alName.get(i)+","+this.alPrice.get(i)+"\n");
 		fw.close();
 		} catch(Throwable e) {
 			e.printStackTrace();

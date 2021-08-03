@@ -50,7 +50,7 @@ public class Coffeeshop {
 						break;
 					}
 				}while(!inManageMenu.equals("q"));
-				menu.save(menu.getName(), menu.getPrice());
+				menu.save();
 				break;
 			case "o", "O":
 				
