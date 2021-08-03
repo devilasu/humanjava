@@ -27,12 +27,6 @@ public class Coffeeshop {
 					case "c":
 						System.out.print("메뉴이름: ");
 						String tmpName = s.nextLine();
-						
-						if(tmpName.isBlank()) {
-							menu.showMenu();
-							menu.save(menu.getName(), menu.getPrice());
-							break;
-						}
 						System.out.print("가격: ");
 						menu.addName(tmpName);
 						menu.addPrice(Integer.parseInt(s.nextLine()));
@@ -56,6 +50,7 @@ public class Coffeeshop {
 						break;
 					}
 				}while(!inManageMenu.equals("q"));
+				menu.save(menu.getName(), menu.getPrice());
 				break;
 			case "o", "O":
 				

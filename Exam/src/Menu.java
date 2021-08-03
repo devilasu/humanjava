@@ -48,20 +48,19 @@ public class Menu {
 	public void updateMenu(String idx, String newName, String newPrice) {
 		int nIdx = Integer.parseInt(idx);
 		int nPrice = Integer.parseInt(newPrice);
-		this.alName.set(nIdx, newName);
-		this.alPrice.set(nIdx, nPrice);
+		this.alName.set(nIdx-1, newName);
+		this.alPrice.set(nIdx-1, nPrice);
 	}
 	
 	public void deleteMenu(String idx) {
 		int nIdx = Integer.parseInt(idx);
-		this.alName.remove(nIdx);
-		this.alPrice.remove(nIdx);
+		this.alName.remove(nIdx-1);
+		this.alPrice.remove(nIdx-1);
 	}
 	
 	public void showMenu() {
-		for(int i = 0 ; i<this.alName.size();i++) {
-			System.out.print(i+". "+this.alName.get(i)+"\t");
-			System.out.println(this.alPrice.get(i));
+		for(int i = 1 ; i<this.alName.size();i++) {
+			System.out.println(i+". "+String.format("%-10s\t%d",this.alName.get(i-1),this.alPrice.get(i-1)));
 		}
 	}
 	

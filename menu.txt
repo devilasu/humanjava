@@ -1,5 +1,6 @@
 Americano,2000
 Espresso,2500
 Latte,3500
-juice,5000
-apple huice,5000
+mango juice,6000
+apple juice,5000
+apple juice,5000
