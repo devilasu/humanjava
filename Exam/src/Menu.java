@@ -28,11 +28,17 @@ public class Menu {
 	public ArrayList<String> getName() {
 		return this.alName;
 	}
+	public String getName(String idx) {
+		return this.alName.get(Integer.parseInt(idx)-1);
+	}
 	public void addName(String name) {
 		this.alName.add(name);
 	}
 	public ArrayList<Integer> getPrice() {
 		return this.alPrice;
+	}
+	public int getPrice(String idx) {
+		return this.alPrice.get(Integer.parseInt(idx)-1);
 	}
 	public void addPrice(Integer price) {
 		this.alPrice.add(price);
@@ -46,8 +52,8 @@ public class Menu {
 		String tmpName, tmpPrice;
 		System.out.print("메뉴이름: ");
 		tmpName = s.nextLine();
-		if(tmpName.isBlank()) {
-		//	s.close();
+		if(tmpName.isBlank() || tmpName==null) {
+			System.out.println("메뉴명이 비었습니다.");
 			return;
 		}
 			
@@ -55,10 +61,11 @@ public class Menu {
 		tmpPrice = s.nextLine();
 		this.addName(tmpName);
 		this.addPrice(Integer.parseInt(tmpPrice));
+		System.out.println("메뉴가 추가되었습니다.");
 	//	s.close();
 	}
 	
-	public void updateMenu(Scanner s) {
+	public void changeMenu(Scanner s) {
 		this.showMenu();
 		String nIdx, newName, newPrice;
 		System.out.println("업데이트할 번호를 입력하세요.");;
@@ -70,6 +77,7 @@ public class Menu {
 		
 		this.alName.set(Integer.parseInt(nIdx)-1, newName);
 		this.alPrice.set(Integer.parseInt(nIdx)-1, Integer.parseInt(newPrice));
+		System.out.println("메뉴가 변경되었습니다.");
 	//	s.close();
 	}
 	
@@ -79,6 +87,7 @@ public class Menu {
 		
 		this.alName.remove(nIdx-1);
 		this.alPrice.remove(nIdx-1);
+		System.out.println("메뉴가 삭제되었습니다.");
 	//	s.close();
 	}
 	

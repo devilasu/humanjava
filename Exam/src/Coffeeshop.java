@@ -30,7 +30,7 @@ public class Coffeeshop {
 						menu.showMenu();
 						break;
 					case "u":
-						menu.updateMenu(sc);
+						menu.changeMenu(sc);
 						break;
 					case "d":
 						menu.deleteMenu(sc);
@@ -42,7 +42,8 @@ public class Coffeeshop {
 				break;
 			case "o", "O":
 				System.out.println("林巩包府");
-				
+				Order order = new Order();
+				order.manageOrder(sc);
 				break;
 			case "s", "S":
 				System.out.println("角利焊扁");

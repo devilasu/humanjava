@@ -3,5 +3,5 @@ Espresso,2500
 Latte,3500
 mango juice,6000
 apple juice,5000
-ice choco,4000
-smoothy,6000
+Ice Choco,4000
+Ice Coffee,3500
