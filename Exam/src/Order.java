@@ -44,12 +44,12 @@ public class Order {
 	}
 	
 	int addOrder(String name, String cnt) {
-		addMenu(menu.getName(name));
-		addCount(cnt);
+		this.addMenu(menu.getName(name));
+		this.addCount(cnt);
 		int price= menu.getPrice(name);
 		int total = 0;
 		total = price*Integer.parseInt(cnt);
-		this.alTotal.add(total);
+		this.addTotalPrice(total);
 		return total;
 	}
 	
