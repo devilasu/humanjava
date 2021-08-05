@@ -1,29 +1,28 @@
 
-public class Television implements RemoteControl {
-	private int volume;
+public class Audio implements RemoteControl {
+	private int _volume;
 	@Override
 	public void turnOn() {
 		// TODO Auto-generated method stub
-		System.out.println("TV¸¦ ÄÕ´Ï´Ù.");
+		System.out.println("Audio¸¦ ÄÕ´Ï´Ù.");
 	}
 
 	@Override
 	public void turnOff() {
 		// TODO Auto-generated method stub
-		System.out.println("TV¸¦ ²ü´Ï´Ù.");
+		System.out.println("Audio¸¦ ²ü´Ï´Ù.");
 	}
 
 	@Override
 	public void setVolume(int volume) {
 		// TODO Auto-generated method stub
 		if(volume>RemoteControl.MAX_VOLUME) {
-			this.volume=RemoteControl.MAX_VOLUME;
+			this._volume=RemoteControl.MAX_VOLUME;
 		}else if(volume<RemoteControl.MIN_VOLUME) {
-			this.volume=RemoteControl.MIN_VOLUME;
+			this._volume=RemoteControl.MIN_VOLUME;
 		}else {
-			this.volume=volume;
+			this._volume=volume;
 		}
-		System.out.println("ÇöÀçTVº¼·ý: "+this.volume);
+		System.out.println("ÇöÀçAudioº¼·ý: "+this._volume);
 	}
-
 }
