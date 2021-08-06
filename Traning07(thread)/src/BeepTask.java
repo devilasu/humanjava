@@ -1,6 +1,6 @@
 import java.awt.Toolkit;
 
-public class BeepTask implements Runnable {
+public class BeepTask extends Thread{//implements Runnable {
 
 	@Override
 	public void run() {
